@@ -13,4 +13,11 @@ class Task extends Model {
      */
     protected $fillable = ['name'];
 
+    /**
+     * Получить все задачи пользователя.
+     */
+    public function tasks() {
+	return $this->hasMany(Task::class);
+    }
+
 }
